@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { RowndProvider } from '@rownd/react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <RowndProvider
+    appKey="key_gbb97x3pfzxusc0ow9vlfpnv"
+  >
     <App />
-  </React.StrictMode>
+  </RowndProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
