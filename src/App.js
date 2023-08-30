@@ -9,8 +9,6 @@ function App() {
 
   const { is_authenticated } = useRownd();
 
-
-
   return (
 
       <Account>
