@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useRownd } from "@rownd/react";
 const Login = () => {
-    const [email, setEmail] = useState('');
+
     const { requestSignIn } = useRownd();
 
     const onSubmit = (event) => {
         event.preventDefault();
-        requestSignIn({auto_sign_in: true, identifier: email});
+        requestSignIn({auto_sign_in: true});
     
     };
 
     return (
         <div>
             <form onSubmit={onSubmit}>
-                <label htmlFor='email'>Email </label>
-                <input value = {email} onChange= {(event) => setEmail(event.target.value)} />
-                <button type="submit">Login </button>
+                <button type="submit">Sign in or sign up </button>
             </form>     
         </div>
     );
