@@ -54,6 +54,27 @@ const Account = (props) => {
         
     }
 
+    const verifyAccessToken = async (token) => {
+
+        const options = {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ token }),
+          };
+          
+          fetch('/api/verify-token', options)
+          .then((response) => response.json())  
+          .then((data) => {
+              if (data.valid) {
+                console.log("Token is valid");
+              } else {
+                console.log("Token is not valid");
+              }
+            })
+            .catch((error) => console.log(error));
+      
+    };
+
     const logout = () => {
         const user = Pool.getCurrentUser();
         if (user) {
@@ -62,7 +83,7 @@ const Account = (props) => {
     };
 
     return ( <div className="App-header">
-            <AccountContext.Provider value={{ authenticate, getSession, logout}}>
+            <AccountContext.Provider value={{ authenticate, getSession, verifyAccessToken, logout}}>
             {props.children}
             </AccountContext.Provider>
         </div>
