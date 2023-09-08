@@ -1,5 +1,4 @@
 import './App.css';
-import SignUp from './components/Signup';
 import Login from './components/Login';
 import { Account } from './components/Account';
 import Status from './components/Status';
@@ -9,7 +8,7 @@ function App() {
 
       <Account>
       <Status/>
-      <SignUp/>
+      {/* <SignUp/> */}
       <Login/>
       {/* <Settings/> */}
       </Account>
