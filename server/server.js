@@ -4,8 +4,8 @@ const verifier = require('./tokenHandler')
 const { createInstance } = require("@rownd/node");
 
  const rownd = createInstance({
-  app_key: 'key_dtul1e2bstgmtuouiim43v0v',
-  app_secret: '14826e94a05f36091bb303a4a1e3be1566c3b00855663d1e',
+  app_key: '<app_key>',
+  app_secret: '<app_secret>',
 });
 
 const { authenticate } = rownd.express;

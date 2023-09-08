@@ -7,7 +7,7 @@ import { RowndProvider } from '@rownd/react';
 
 ReactDOM.render(
   <RowndProvider
-    appKey="key_gbb97x3pfzxusc0ow9vlfpnv"
+    appKey="<appKey>"
   >
     <App/>
   </RowndProvider>,
